@@ -29,8 +29,11 @@ public class MapRotate : MonoBehaviour {
 	IEnumerator rotate(){
 		while (active){
 			yield return new WaitForSeconds(rotationPause);
+			CameraRumbler.cRumbler.rumble(0.3f,0.2f);
+			//print ("callrumble");
 			rotateIt=true;
 			yield return new WaitForSeconds(rotationTime);
+			CameraRumbler.cRumbler.rumble(0.1f,0.1f);
 			rotateIt=false;
 		}
 

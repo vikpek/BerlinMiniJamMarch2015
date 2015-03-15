@@ -18,6 +18,8 @@ public class EndGame : MonoBehaviour {
 		if(other.tag=="Player"){
 			print ("EndGame");
 			rotationScript.active=false;
+			Cursor.visible = true;
+			//Cursor.lockState = false;
 			//Destroy(this.gameObject);
 		}
 		

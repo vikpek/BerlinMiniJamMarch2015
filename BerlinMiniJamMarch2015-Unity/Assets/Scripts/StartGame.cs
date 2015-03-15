@@ -5,7 +5,8 @@ public class StartGame : MonoBehaviour {
 	public MapRotate rotationScript;
 	// Use this for initialization
 	void Start () {
-	
+		Cursor.visible=true;
+		//Cursor.lockState = true;
 	}
 	
 	// Update is called once per frame
