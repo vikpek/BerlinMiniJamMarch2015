@@ -231,6 +231,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &576291489
+GameObject:
+  m_PrefabParentObject: {fileID: 182072, guid: 7959ea62c147207459925d43fbca8c01, type: 2}
+  m_PrefabInternal: {fileID: 947523629}
+--- !u!114 &576291490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 576291489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ee1dcd2e2d4d2eb83ad40584cf95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &784959121
+GameObject:
+  m_PrefabParentObject: {fileID: 192236, guid: 7959ea62c147207459925d43fbca8c01, type: 2}
+  m_PrefabInternal: {fileID: 947523629}
+--- !u!114 &784959122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 784959121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ee1dcd2e2d4d2eb83ad40584cf95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &947523629
 Prefab:
   m_ObjectHideFlags: 0
@@ -270,17 +300,39 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 6142264, guid: 7959ea62c147207459925d43fbca8c01, type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402688, guid: 7959ea62c147207459925d43fbca8c01, type: 2}
-      propertyPath: active
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7959ea62c147207459925d43fbca8c01, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1125708504
+GameObject:
+  m_PrefabParentObject: {fileID: 133778, guid: 7959ea62c147207459925d43fbca8c01, type: 2}
+  m_PrefabInternal: {fileID: 947523629}
+--- !u!114 &1125708505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1125708504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ee1dcd2e2d4d2eb83ad40584cf95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1156849387
+GameObject:
+  m_PrefabParentObject: {fileID: 179906, guid: 7959ea62c147207459925d43fbca8c01, type: 2}
+  m_PrefabInternal: {fileID: 947523629}
+--- !u!114 &1156849388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1156849387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ee1dcd2e2d4d2eb83ad40584cf95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1654956521
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +415,21 @@ Transform:
   - {fileID: 2054263086}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &1972274923
+GameObject:
+  m_PrefabParentObject: {fileID: 100952, guid: 7959ea62c147207459925d43fbca8c01, type: 2}
+  m_PrefabInternal: {fileID: 947523629}
+--- !u!114 &1972274924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1972274923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2ee1dcd2e2d4d2eb83ad40584cf95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2054263085
 Prefab:
   m_ObjectHideFlags: 0
@@ -463,6 +530,14 @@ Prefab:
     - target: {fileID: 424648, guid: a532b14c255334e50b43a28eb5b32cfa, type: 2}
       propertyPath: m_LocalScale.z
       value: 4.48607397
+      objectReference: {fileID: 0}
+    - target: {fileID: 11485736, guid: a532b14c255334e50b43a28eb5b32cfa, type: 2}
+      propertyPath: jumpHeight
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11485736, guid: a532b14c255334e50b43a28eb5b32cfa, type: 2}
+      propertyPath: projectileSpeed
+      value: 3000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a532b14c255334e50b43a28eb5b32cfa, type: 2}

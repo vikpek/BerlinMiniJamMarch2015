@@ -1,20 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MovementController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BoxCollision.cs">
     <Files>
-      <File FileName="Assets/MovementController.cs" Line="50" Column="5" />
+      <File FileName="Assets/Scripts/MovementController.cs" Line="100" Column="76" />
+      <File FileName="Assets/Scripts/ProjectileController.cs" Line="5" Column="9" />
+      <File FileName="Assets/Scripts/BoxCollision.cs" Line="28" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
-            <Node name="MovementController.cs" selected="True" />
-          </Node>
-          <Node name="Assembly-CSharp-firstpass" expanded="True">
-            <Node name="Standard Assets" expanded="True">
-              <Node name="2D" expanded="True">
-                <Node name="Scripts" expanded="True" />
-              </Node>
+            <Node name="Scripts" expanded="True">
+              <Node name="BoxCollision.cs" selected="True" />
             </Node>
           </Node>
         </State>
