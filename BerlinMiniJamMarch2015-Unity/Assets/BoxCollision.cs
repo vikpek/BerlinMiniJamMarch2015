@@ -14,11 +14,14 @@ public class BoxCollision : MonoBehaviour {
 	
 	}
 	void OnTriggerEnter2D(Collider2D other) {
+		print ("hit");
 		if(other.gameObject.tag=="Projectile"){
 			//other.gameObject.GetComponent<ProjectileController>().ProjectileType==Type{
 			Destroy (other.gameObject);
-			Destroy (this.gameObject);
+			Destroy (this.transform.parent.gameObject);
 
+			//}else{
+			//	Destroy (other.gameObject);
 			//}
 		}
 		

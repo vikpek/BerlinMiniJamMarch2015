@@ -66,10 +66,10 @@ public class MovementController : MonoBehaviour
 		}
 
 		if (lastFacingDirectionIsRight) {
-			transform.localScale = new Vector3 (1, 1, 1);
+			//transform.localScale = new Vector3 (1, 1, 1);
 
 		} else {
-			transform.localScale = new Vector3 (-1, 1, 1);
+			//transform.localScale = new Vector3 (-1, 1, 1);
 		}
 		
 	}
