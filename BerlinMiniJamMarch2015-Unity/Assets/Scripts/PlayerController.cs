@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class PlayerController : MonoBehaviour
 	bool canJump = true;
 
 
+	int currentWeapon = 0;
+
 
 	// Use this for initialization
 	void Start ()
@@ -48,6 +51,7 @@ public class PlayerController : MonoBehaviour
 		LarpToZeroRotation();
 		Move ();
 		Shoot ();
+		SelectWeapon();
 
 	}
 
@@ -82,6 +86,21 @@ public class PlayerController : MonoBehaviour
 		
 	}
 
+	void SelectWeapon ()
+	{
+		if (Input.GetKey ("1")) {
+			currentWeapon = 1;
+		}else if (Input.GetKey ("2")) {
+			currentWeapon = 2;
+		}else if (Input.GetKey ("3")) {
+			currentWeapon = 3;
+		}else if (Input.GetKey ("4")) {
+			currentWeapon = 4;
+		}
+
+		GameObject.FindGameObjectWithTag("WeaponText").GetComponent<Text>().text = "Weapon: " + currentWeapon;
+	}
+
 	void Shoot ()
 	{
 		if (canShoot) {
@@ -107,7 +126,7 @@ public class PlayerController : MonoBehaviour
 	void InstantiateProjectile (int right)
 	{
 		GameObject projectileObject = (GameObject)Instantiate (projectile, transform.position + (right * Vector3.right), transform.rotation);
-		projectileObject.GetComponent<ProjectileController> ().projectileType = 1;
+		projectileObject.GetComponent<ProjectileController> ().projectileType = currentWeapon;
 		projectileObject.GetComponent<Rigidbody2D> ().AddForce (right * Vector2.right * projectileSpeed);
 	}
 
