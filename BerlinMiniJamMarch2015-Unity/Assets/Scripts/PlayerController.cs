@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 			"1 : Turquoise \n " +
 			"2 : Yellow \n " +
 			"3 : Red \n " +
-			"4 : Yellow \n " +
+			"4 : Orange \n " +
 			"Current Weapon: \n";
 	}
 
@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetKey ("up")) {
 			if (CheckIfInAir ()) {
+				GetComponent<AudioSource>().Play ();
 				transform.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * jumpHeight);
 			}
 		}

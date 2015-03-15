@@ -4,6 +4,11 @@ using System.Collections;
 public class ProjectileController : MonoBehaviour {
 	public int projectileType{get; set;}
 
+	void Start()
+	{
+		GetComponent<AudioSource>().Play();
+	}
+
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		StartCoroutine(DestroyDelayed());
