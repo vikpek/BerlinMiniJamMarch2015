@@ -1,24 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BoxSoundController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EndGame.cs">
     <Files>
-      <File FileName="Assets/BoxSoundController.cs" Line="21" Column="1" />
-      <File FileName="Assets/Scripts/BoxCollision.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ProjectileController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Destructor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EndGame.cs" Line="1" Column="1" />
+      <File FileName="BerlinMiniJamMarch2015-Unity.sln" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EndGame.cs" Line="24" Column="3" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Scripts" expanded="True">
-              <Node name="ProjectileController.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

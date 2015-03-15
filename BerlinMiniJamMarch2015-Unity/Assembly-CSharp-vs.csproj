@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraRumbler.cs" />
      <Compile Include="Assets\Scripts\BoxCollision.cs" />
      <Compile Include="Assets\Scripts\BoxSoundController.cs" />
      <Compile Include="Assets\Scripts\Destructor.cs" />
