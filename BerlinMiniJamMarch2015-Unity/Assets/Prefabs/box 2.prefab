@@ -119,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0399999991, y: .310000002, z: 0}
+  m_LocalPosition: {x: .0399999991, y: -1, z: 0}
   m_LocalScale: {x: 5.23747683, y: 5.2374773, z: 5.2374773}
   m_Children:
   - {fileID: 474080}
@@ -325,6 +325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 3
+  PE_Sparkle: {fileID: 126112, guid: 32c39ec2a09a3cd4689e7bd40044ad40, type: 2}
+  PE_Stay: {fileID: 108602, guid: b37459a357f28b04088d697e6715f2ce, type: 2}
 --- !u!114 &11423508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -337,6 +339,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 1
+  PE_Sparkle: {fileID: 124562, guid: 98e406ebba4966c4abbdb73830deec0a, type: 2}
+  PE_Stay: {fileID: 114764, guid: 0ef0ffd44f47b514a8aebbdd8506bfd0, type: 2}
 --- !u!114 &11441886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,6 +365,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 2
+  PE_Sparkle: {fileID: 162642, guid: 35981e26d13cf524f8681316b27a1cad, type: 2}
+  PE_Stay: {fileID: 117552, guid: 2251bc589cba5e2499d0198e9e0c2c71, type: 2}
 --- !u!114 &11483486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -373,6 +379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 4
+  PE_Sparkle: {fileID: 134674, guid: d7b8fe3d215c5ce4ebbf83f1947541e9, type: 2}
+  PE_Stay: {fileID: 196096, guid: 8245fc59055251541922d838dd85b77e, type: 2}
 --- !u!212 &21299346
 SpriteRenderer:
   m_ObjectHideFlags: 1

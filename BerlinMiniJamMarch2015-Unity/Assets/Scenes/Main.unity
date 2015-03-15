@@ -2775,6 +2775,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
+  PE_Sparkle: {fileID: 126112, guid: 32c39ec2a09a3cd4689e7bd40044ad40, type: 2}
+  PE_Stay: {fileID: 108602, guid: b37459a357f28b04088d697e6715f2ce, type: 2}
 --- !u!212 &764167527
 SpriteRenderer:
   m_ObjectHideFlags: 0
