@@ -39,12 +39,6 @@ public class PlayerController : MonoBehaviour
 	int currentWeapon = 1;
 
 
-	// Use this for initialization
-	void Start ()
-	{
-		HudController.hudController.setColorForProjectileType(1);
-	}
-
 	void Update ()
 	{
 

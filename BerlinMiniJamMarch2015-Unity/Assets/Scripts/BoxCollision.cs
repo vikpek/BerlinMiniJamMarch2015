@@ -5,7 +5,8 @@ public class BoxCollision : MonoBehaviour
 {
 	// Use this for initialization
 	public int Type = 1;
-
+	public GameObject PE_Sparkle;
+	public GameObject PE_Stay;
 	void Start ()
 	{
 	
@@ -39,7 +40,9 @@ public class BoxCollision : MonoBehaviour
 
 	IEnumerator DestroyDelayed ()
 	{
-		yield return new WaitForSeconds (1f);
+		Instantiate(PE_Sparkle,transform.position,Quaternion.identity);
+		Instantiate(PE_Stay,transform.position,Quaternion.identity);
+		yield return new WaitForSeconds (5f);
 		Destroy (this.transform.parent.gameObject);
 	}
 	/*
