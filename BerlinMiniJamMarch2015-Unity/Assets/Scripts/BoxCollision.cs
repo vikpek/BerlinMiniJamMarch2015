@@ -21,15 +21,7 @@ public class BoxCollision : MonoBehaviour
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.gameObject.tag == "Projectile") {
-
-			if(Type == 0)
-			{
-				GetComponentInParent<BoxSoundController>().playExplosion();	
-				GetComponent<BoxCollider2D>().enabled = false;
-				GetComponent<SpriteRenderer>().enabled = false;
-				StartCoroutine(DestroyDelayed());
-			}
-			if (other.gameObject.GetComponent<ProjectileController> ().projectileType == Type) {
+			if (Type == 0 || other.gameObject.GetComponent<ProjectileController> ().projectileType == Type) {
 				GetComponentInParent<BoxSoundController>().playExplosion();	
 				this.transform.parent.GetComponent<BoxCollider2D>().enabled = false;
 				this.transform.parent.GetComponent<SpriteRenderer>().enabled = false;
@@ -42,7 +34,7 @@ public class BoxCollision : MonoBehaviour
 	{
 		Instantiate(PE_Sparkle,transform.position,Quaternion.identity);
 		Instantiate(PE_Stay,transform.position,Quaternion.identity);
-		yield return new WaitForSeconds (5f);
+		yield return new WaitForSeconds (2f);
 		Destroy (this.transform.parent.gameObject);
 	}
 	/*

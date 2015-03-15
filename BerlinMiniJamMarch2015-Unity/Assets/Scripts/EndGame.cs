@@ -16,9 +16,12 @@ public class EndGame : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		//print ("collision");
 		if(other.tag=="Player"){
-			print ("EndGame");
-			rotationScript.active=false;
-			Cursor.visible = true;
+			if(GameObject.FindGameObjectsWithTag("Box").Length == 0){
+				Application.LoadLevel("End");
+				rotationScript.active=false;
+				Cursor.visible = true;
+			}
+
 			//Cursor.lockState = false;
 			//Destroy(this.gameObject);
 		}
