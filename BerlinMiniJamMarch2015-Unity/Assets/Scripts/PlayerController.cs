@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MovementController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 
 	[SerializeField]
