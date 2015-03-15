@@ -2,5 +2,5 @@
 using System.Collections;
 
 public class ProjectileController : MonoBehaviour {
-	int projectileType{get; set;}
+	public int projectileType{get; set;}
 }

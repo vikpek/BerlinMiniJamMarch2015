@@ -46,12 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BoxCollision.cs" />
-     <Compile Include="Assets\EndGame.cs" />
-     <Compile Include="Assets\Micha\MapRotate.cs" />
-     <Compile Include="Assets\MovementController.cs" />
-     <Compile Include="Assets\ProjectileController.cs" />
-     <Compile Include="Assets\StartGame.cs" />
+     <Compile Include="Assets\Destructor.cs" />
+     <Compile Include="Assets\Scripts\BoxCollision.cs" />
+     <Compile Include="Assets\Scripts\EndGame.cs" />
+     <Compile Include="Assets\Scripts\MapRotate.cs" />
+     <Compile Include="Assets\Scripts\MovementController.cs" />
+     <Compile Include="Assets\Scripts\ProjectileController.cs" />
+     <Compile Include="Assets\Scripts\StartGame.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/progs/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

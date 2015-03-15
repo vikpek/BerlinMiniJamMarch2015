@@ -13,7 +13,7 @@ public class MapRotate : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rotationSpeed=rotationAmount/rotationTime;
-		StartCoroutine(rotate());
+//		StartCoroutine(rotate());
 
 	}
 	

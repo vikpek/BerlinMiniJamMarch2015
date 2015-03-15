@@ -64,12 +64,22 @@ public class MovementController : MonoBehaviour
 				transform.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * jumpHeight);
 			}
 		}
+	
+		Vector3 tmp = transform.localScale;
 
 		if (lastFacingDirectionIsRight) {
+//<<<<<<< HEAD:BerlinMiniJamMarch2015-Unity/Assets/MovementController.cs
 			//transform.localScale = new Vector3 (1, 1, 1);
 
-		} else {
 			//transform.localScale = new Vector3 (-1, 1, 1);
+//=======
+			tmp.x = Mathf.Abs(tmp.x);
+			transform.localScale = tmp;
+
+		} else {
+			tmp.x = -Mathf.Abs(tmp.x);
+			transform.localScale = tmp;
+//>>>>>>> origin/vik:BerlinMiniJamMarch2015-Unity/Assets/Scripts/MovementController.cs
 		}
 		
 	}
@@ -82,14 +92,19 @@ public class MovementController : MonoBehaviour
 				StartCoroutine ("reload");
 
 				if (lastFacingDirectionIsRight) {
-					GameObject projectileObject = (GameObject)Instantiate (projectile, transform.position + Vector3.right, transform.rotation);
-					projectileObject.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * projectileSpeed);
+					InstantiateProjectile(1);
 				} else {
-					GameObject projectileObject = (GameObject)Instantiate (projectile, transform.position - Vector3.right, transform.rotation);
-					projectileObject.GetComponent<Rigidbody2D> ().AddForce (-Vector2.right * projectileSpeed);
+					InstantiateProjectile (-1);
 				}
 			}
 		}
+	}
+
+	void InstantiateProjectile (int right)
+	{
+		GameObject projectileObject = (GameObject)Instantiate (projectile, transform.position + (right * Vector3.right), transform.rotation);
+		projectileObject.GetComponent<ProjectileController> ().projectileType = 1;
+		projectileObject.GetComponent<Rigidbody2D> ().AddForce (right * Vector2.right * projectileSpeed);
 	}
 
 	bool CheckIfInAir ()
