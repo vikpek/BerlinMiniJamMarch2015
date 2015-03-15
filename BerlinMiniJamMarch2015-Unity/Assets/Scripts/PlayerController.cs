@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
 	float
 		maximumJumpVelocity = 5f;
 
+	[SerializeField]
+	float 
+		normalizationRoationSpeed = 0.1f;
+
 	bool lastFacingDirectionIsRight = true;
 	bool canShoot = true;
 	bool canJump = true;
@@ -41,7 +45,7 @@ public class PlayerController : MonoBehaviour
 	void Update ()
 	{
 
-
+		LarpToZeroRotation();
 		Move ();
 		Shoot ();
 
@@ -68,18 +72,12 @@ public class PlayerController : MonoBehaviour
 		Vector3 tmp = transform.localScale;
 
 		if (lastFacingDirectionIsRight) {
-//<<<<<<< HEAD:BerlinMiniJamMarch2015-Unity/Assets/MovementController.cs
-			//transform.localScale = new Vector3 (1, 1, 1);
-
-			//transform.localScale = new Vector3 (-1, 1, 1);
-//=======
 			tmp.x = Mathf.Abs(tmp.x);
 			transform.localScale = tmp;
 
 		} else {
 			tmp.x = -Mathf.Abs(tmp.x);
 			transform.localScale = tmp;
-//>>>>>>> origin/vik:BerlinMiniJamMarch2015-Unity/Assets/Scripts/MovementController.cs
 		}
 		
 	}
@@ -100,6 +98,12 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
+	void LarpToZeroRotation ()
+	{
+
+		transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.identity, normalizationRoationSpeed);
+	}
+
 	void InstantiateProjectile (int right)
 	{
 		GameObject projectileObject = (GameObject)Instantiate (projectile, transform.position + (right * Vector3.right), transform.rotation);
@@ -110,7 +114,6 @@ public class PlayerController : MonoBehaviour
 	bool CheckIfInAir ()
 	{
 		if (canJump) {
-			Debug.Log (transform.GetComponent<Rigidbody2D> ().velocity.y);
 			if (transform.GetComponent<Rigidbody2D> ().velocity.y < 0) {
 				return false;
 			} else if (transform.GetComponent<Rigidbody2D> ().velocity.y > maximumJumpVelocity) {

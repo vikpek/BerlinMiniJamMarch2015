@@ -18,7 +18,7 @@ public class Destructor : MonoBehaviour {
 	{
 		if(collider.gameObject.tag == "Projectile")
 		{
-			Destroy(collider.gameObject);
+//			Destroy(collider.gameObject);
 		}
 	}
 

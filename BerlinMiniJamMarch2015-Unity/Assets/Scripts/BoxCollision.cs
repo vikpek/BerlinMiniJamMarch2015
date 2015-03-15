@@ -21,11 +21,12 @@ public class BoxCollision : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Projectile") {
 			if (other.gameObject.GetComponent<ProjectileController> ().projectileType == Type) {
-				Destroy (other.gameObject);
+//				Destroy (other.gameObject);
 				Destroy (this.transform.parent.gameObject);
 
+
 			}else {
-				Destroy (other.gameObject);
+//				Destroy (other.gameObject);
 			}
 		}
 		
