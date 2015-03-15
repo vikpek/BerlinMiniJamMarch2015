@@ -36,13 +36,19 @@ public class PlayerController : MonoBehaviour
 	bool canJump = true;
 
 
-	int currentWeapon = 0;
+	int currentWeapon = 1;
 
+	string hudText;
 
 	// Use this for initialization
 	void Start ()
 	{
-
+		hudText = "" +
+			"1 : Turquoise \n " +
+			"2 : Yellow \n " +
+			"3 : Red \n " +
+			"4 : Yellow \n " +
+			"Current Weapon: \n";
 	}
 
 	void Update ()
@@ -90,15 +96,17 @@ public class PlayerController : MonoBehaviour
 	{
 		if (Input.GetKey ("1")) {
 			currentWeapon = 1;
+			GameObject.FindGameObjectWithTag("WeaponText").GetComponent<Text>().text = hudText + "Turquoise";
 		}else if (Input.GetKey ("2")) {
 			currentWeapon = 2;
+			GameObject.FindGameObjectWithTag("WeaponText").GetComponent<Text>().text = hudText + "Yellow";
 		}else if (Input.GetKey ("3")) {
 			currentWeapon = 3;
+			GameObject.FindGameObjectWithTag("WeaponText").GetComponent<Text>().text = hudText + "Red";
 		}else if (Input.GetKey ("4")) {
 			currentWeapon = 4;
+			GameObject.FindGameObjectWithTag("WeaponText").GetComponent<Text>().text = hudText + "Orange";
 		}
-
-		GameObject.FindGameObjectWithTag("WeaponText").GetComponent<Text>().text = "Weapon: " + currentWeapon;
 	}
 
 	void Shoot ()
