@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EndGame.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MapRotate.cs">
     <Files>
-      <File FileName="BerlinMiniJamMarch2015-Unity.sln" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EndGame.cs" Line="24" Column="3" />
+      <File FileName="Assets\CameraRumbler.cs" Line="29" Column="30" />
+      <File FileName="Assets\Scripts\MapRotate.cs" Line="36" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
