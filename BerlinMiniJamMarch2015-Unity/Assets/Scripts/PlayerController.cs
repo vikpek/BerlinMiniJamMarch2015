@@ -68,12 +68,18 @@ public class PlayerController : MonoBehaviour
 		Vector3 tmp = transform.localScale;
 
 		if (lastFacingDirectionIsRight) {
+//<<<<<<< HEAD:BerlinMiniJamMarch2015-Unity/Assets/MovementController.cs
+			//transform.localScale = new Vector3 (1, 1, 1);
+
+			//transform.localScale = new Vector3 (-1, 1, 1);
+//=======
 			tmp.x = Mathf.Abs(tmp.x);
 			transform.localScale = tmp;
 
 		} else {
 			tmp.x = -Mathf.Abs(tmp.x);
 			transform.localScale = tmp;
+//>>>>>>> origin/vik:BerlinMiniJamMarch2015-Unity/Assets/Scripts/MovementController.cs
 		}
 		
 	}
