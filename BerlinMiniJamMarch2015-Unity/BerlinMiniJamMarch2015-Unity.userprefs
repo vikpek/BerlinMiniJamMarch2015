@@ -1,21 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ProjectileController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/WaveBehavior.cs">
     <Files>
       <File FileName="Assets/Scripts/BoxCollision.cs" Line="18" Column="3" />
       <File FileName="Assets/Scripts/ProjectileController.cs" Line="23" Column="37" />
       <File FileName="Assets/Scripts/Destructor.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/EndGame.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BoxSoundController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="79" Column="40" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/WaveBehavior.cs" Line="27" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Scripts" expanded="True">
-              <Node name="ProjectileController.cs" selected="True" />
-            </Node>
+            <Node name="Scripts" expanded="True" />
+            <Node name="WaveBehavior.cs" selected="True" />
           </Node>
         </State>
       </Pad>

@@ -38,17 +38,11 @@ public class PlayerController : MonoBehaviour
 
 	int currentWeapon = 1;
 
-	string hudText;
 
 	// Use this for initialization
 	void Start ()
 	{
-		hudText = "" +
-			"1 : Turquoise \n " +
-			"2 : Yellow \n " +
-			"3 : Red \n " +
-			"4 : Orange \n " +
-			"Current Weapon: \n";
+		HudController.hudController.setColorForProjectileType(1);
 	}
 
 	void Update ()
@@ -97,16 +91,16 @@ public class PlayerController : MonoBehaviour
 	{
 		if (Input.GetKey ("1")) {
 			currentWeapon = 1;
-			GameObject.FindGameObjectWithTag("WeaponText").GetComponent<Text>().text = hudText + "Turquoise";
+			HudController.hudController.setColorForProjectileType(1);
 		}else if (Input.GetKey ("2")) {
 			currentWeapon = 2;
-			GameObject.FindGameObjectWithTag("WeaponText").GetComponent<Text>().text = hudText + "Yellow";
+			HudController.hudController.setColorForProjectileType(2);
 		}else if (Input.GetKey ("3")) {
 			currentWeapon = 3;
-			GameObject.FindGameObjectWithTag("WeaponText").GetComponent<Text>().text = hudText + "Red";
+			HudController.hudController.setColorForProjectileType(3);
 		}else if (Input.GetKey ("4")) {
 			currentWeapon = 4;
-			GameObject.FindGameObjectWithTag("WeaponText").GetComponent<Text>().text = hudText + "Orange";
+			HudController.hudController.setColorForProjectileType(4);
 		}
 	}
 
