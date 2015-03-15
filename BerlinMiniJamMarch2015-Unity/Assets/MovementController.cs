@@ -8,7 +8,8 @@ public class MovementController : MonoBehaviour
 	float
 		movementSpeed = 0.1f;
 	[SerializeField]
-	float projectileSpeed = 30f;
+	float
+		projectileSpeed = 30f;
 	[SerializeField]
 	float
 		jumpHeight = 3f;
@@ -18,13 +19,18 @@ public class MovementController : MonoBehaviour
 	[SerializeField]
 	float
 		shootingCooldown = 0.5f;
-
 	[SerializeField]
-	float maximumJumpVelocity = 5f;
-
+	float
+		jumpingCooldown = 0.5f;
+	[SerializeField]
+	float
+		maximumJumpVelocity = 5f;
 
 	bool lastFacingDirectionIsRight = true;
 	bool canShoot = true;
+	bool canJump = true;
+
+
 
 	// Use this for initialization
 	void Start ()
@@ -44,21 +50,28 @@ public class MovementController : MonoBehaviour
 	void Move ()
 	{
 		if (Input.GetKey ("right")) {
-			transform.GetComponent<Rigidbody2D> ().AddForce( Vector2.right * movementSpeed);
+			transform.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * movementSpeed);
 			lastFacingDirectionIsRight = true;
 		}
 
 		if (Input.GetKey ("left")) {
-			transform.GetComponent<Rigidbody2D> ().AddForce( -Vector2.right * movementSpeed);
+			transform.GetComponent<Rigidbody2D> ().AddForce (-Vector2.right * movementSpeed);
 			lastFacingDirectionIsRight = false;
 		}
 
 		if (Input.GetKey ("up")) {
-			if(CheckIfInAir())
-			{
-				transform.GetComponent<Rigidbody2D> ().AddForce(Vector2.up * jumpHeight);
+			if (CheckIfInAir ()) {
+				transform.GetComponent<Rigidbody2D> ().AddForce (Vector2.up * jumpHeight);
 			}
 		}
+
+		if (lastFacingDirectionIsRight) {
+			transform.localScale = new Vector3 (1, 1, 1);
+
+		} else {
+			transform.localScale = new Vector3 (-1, 1, 1);
+		}
+		
 	}
 
 	void Shoot ()
@@ -79,23 +92,30 @@ public class MovementController : MonoBehaviour
 		}
 	}
 
+	bool CheckIfInAir ()
+	{
+		if (canJump) {
+			Debug.Log (transform.GetComponent<Rigidbody2D> ().velocity.y);
+			if (transform.GetComponent<Rigidbody2D> ().velocity.y < 0) {
+				return false;
+			} else if (transform.GetComponent<Rigidbody2D> ().velocity.y > maximumJumpVelocity) {
+				canJump = false;
+				StartCoroutine ("reloadJump");	
+			} else {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	IEnumerator reload ()
 	{
 		yield return new WaitForSeconds (shootingCooldown);
-		Debug.Log (" reloaded ");
 		canShoot = true;
 	}
-
-	bool CheckIfInAir ()
+	IEnumerator reloadJump ()
 	{
-
-		// BUG holding jump will make it fly...
-		Debug.Log(transform.GetComponent<Rigidbody2D>().velocity.y);
-		if(transform.GetComponent<Rigidbody2D>().velocity.y < 0 || transform.GetComponent<Rigidbody2D>().velocity.y > maximumJumpVelocity)
-		{
-			return false;
-		}else{
-			return true;
-		}
+		yield return new WaitForSeconds (jumpingCooldown);
+		canJump = true;
 	}
 }

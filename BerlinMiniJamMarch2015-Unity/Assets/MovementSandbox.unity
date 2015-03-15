@@ -254,6 +254,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5013118, guid: a532b14c255334e50b43a28eb5b32cfa, type: 2}
+      propertyPath: m_AngularDrag
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013118, guid: a532b14c255334e50b43a28eb5b32cfa, type: 2}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11485736, guid: a532b14c255334e50b43a28eb5b32cfa, type: 2}
+      propertyPath: jumpHeight
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 424648, guid: a532b14c255334e50b43a28eb5b32cfa, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a532b14c255334e50b43a28eb5b32cfa, type: 2}
   m_IsPrefabParent: 0
@@ -383,3 +399,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0b5004687cb64ecba665b7ad3619c14, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2076083076
+GameObject:
+  m_PrefabParentObject: {fileID: 102628, guid: a0b5004687cb64ecba665b7ad3619c14, type: 2}
+  m_PrefabInternal: {fileID: 2076083075}
+--- !u!114 &2076083077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2076083076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12f6f44ea26d401c9e29f4838247198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
